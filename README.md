@@ -2,10 +2,11 @@
 
 https://github.com/Penguin-OS-LINEAGE-OS-BASE/manifest
 
-`penguin.xml` overrides the Lineage `default.xml` + `snippets/lineage.xml`
-with Penguin-OS-LINEAGE-OS-BASE forks.
+Lineage-style manifest repo: `repo init` straight against it.
+Our forks are pinned inline (`penguin` remote); everything else tracks
+LineageOS (`lineage` remote) or AOSP.
 
-v1 scope: QS panel + bootable base.
+Scope: QS panel + bootable base.
 - `frameworks/base` tracks branch `penguin-qs` (additive QS hooks; stock
   behavior without the PenguinSystemUI app).
 - `vendor/penguin` provides the product config (ships `PenguinSystemUI`,
@@ -15,11 +16,6 @@ v1 scope: QS panel + bootable base.
 ## Sync
 
 ```bash
-repo init -u https://github.com/Penguin-OS-LINEAGE-OS-BASE/android -b lineage-24.0
-mkdir -p .repo/local_manifests
-curl -o .repo/local_manifests/penguin.xml \
-  https://raw.githubusercontent.com/Penguin-OS-LINEAGE-OS-BASE/manifest/lineage-24.0/penguin.xml
+repo init -u https://github.com/Penguin-OS-LINEAGE-OS-BASE/manifest -b lineage-24.0
 repo sync
 ```
-
-See `penguin.xml` header for the exact `repo` wiring.
