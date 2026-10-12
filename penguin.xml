@@ -17,13 +17,13 @@
   <remote name="penguin" fetch="https://github.com" />
 
   <!-- Core / build (clean Lineage forks, track lineage-24.0) -->
-  <remove-project name="LineageOS/android_art" />
+  <remove-project name="android_art" />
   <project path="art" name="Penguin-OS-LINEAGE-OS-BASE/android_art" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_bionic" />
+  <remove-project name="android_bionic" />
   <project path="bionic" name="Penguin-OS-LINEAGE-OS-BASE/android_bionic" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_bootable_recovery" />
+  <remove-project name="android_bootable_recovery" />
   <project path="bootable/recovery" name="Penguin-OS-LINEAGE-OS-BASE/android_bootable_recovery" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_build" />
+  <remove-project name="android_build" />
   <project path="build/make" name="Penguin-OS-LINEAGE-OS-BASE/android_build" remote="penguin" revision="lineage-24.0">
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -32,30 +32,30 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <remove-project name="LineageOS/android_build_soong" />
+  <remove-project name="android_build_soong" />
   <project path="build/soong" name="Penguin-OS-LINEAGE-OS-BASE/android_build_soong" remote="penguin" revision="lineage-24.0">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <remove-project name="LineageOS/android_development" />
+  <remove-project name="android_development" />
   <project path="development" name="Penguin-OS-LINEAGE-OS-BASE/android_development" remote="penguin" revision="lineage-24.0" />
 
   <!-- Frameworks -->
-  <remove-project name="LineageOS/android_frameworks_av" />
+  <remove-project name="android_frameworks_av" />
   <project path="frameworks/av" name="Penguin-OS-LINEAGE-OS-BASE/android_frameworks_av" remote="penguin" revision="lineage-24.0" />
   <!-- QS HOOK PORT: additive only (+31/-0). Without the PenguinSystemUI app,
        qsPanels.orElse(null) == null and the stock QS path runs. -->
-  <remove-project name="LineageOS/android_frameworks_base" />
+  <remove-project name="android_frameworks_base" />
   <project path="frameworks/base" name="Penguin-OS-LINEAGE-OS-BASE/android_frameworks_base" remote="penguin" revision="penguin-qs" />
-  <remove-project name="LineageOS/android_frameworks_libs_systemui" />
+  <remove-project name="android_frameworks_libs_systemui" />
   <project path="frameworks/libs/systemui" name="Penguin-OS-LINEAGE-OS-BASE/android_frameworks_libs_systemui" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_frameworks_native" />
+  <remove-project name="android_frameworks_native" />
   <project path="frameworks/native" name="Penguin-OS-LINEAGE-OS-BASE/android_frameworks_native" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_frameworks_opt_telephony" />
+  <remove-project name="android_frameworks_opt_telephony" />
   <project path="frameworks/opt/telephony" name="Penguin-OS-LINEAGE-OS-BASE/android_frameworks_opt_telephony" remote="penguin" revision="lineage-24.0" />
 
   <!-- Hardware -->
-  <remove-project name="LineageOS/android_hardware_interfaces" />
+  <remove-project name="android_hardware_interfaces" />
   <project path="hardware/interfaces" name="Penguin-OS-LINEAGE-OS-BASE/android_hardware_interfaces" remote="penguin" revision="lineage-24.0" />
   <remove-project name="platform/hardware/libhardware" />
   <project path="hardware/libhardware" name="Penguin-OS-LINEAGE-OS-BASE/android_hardware_libhardware" remote="penguin" revision="lineage-24.0" />
@@ -67,15 +67,15 @@
   <project path="libcore" name="Penguin-OS-LINEAGE-OS-BASE/android_libcore" remote="penguin" revision="lineage-21.0" />
 
   <!-- System -->
-  <remove-project name="LineageOS/android_system_core" />
+  <remove-project name="android_system_core" />
   <project path="system/core" name="Penguin-OS-LINEAGE-OS-BASE/android_system_core" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_system_media" />
+  <remove-project name="android_system_media" />
   <project path="system/media" name="Penguin-OS-LINEAGE-OS-BASE/android_system_media" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_system_netd" />
+  <remove-project name="android_system_netd" />
   <project path="system/netd" name="Penguin-OS-LINEAGE-OS-BASE/android_system_netd" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_system_sepolicy" />
+  <remove-project name="android_system_sepolicy" />
   <project path="system/sepolicy" name="Penguin-OS-LINEAGE-OS-BASE/android_system_sepolicy" remote="penguin" revision="lineage-24.0" />
-  <remove-project name="LineageOS/android_system_vold" />
+  <remove-project name="android_system_vold" />
   <project path="system/vold" name="Penguin-OS-LINEAGE-OS-BASE/android_system_vold" remote="penguin" revision="lineage-24.0" />
 
   <!-- Vendor: use vendor/penguin, never vendor/lineage -->
